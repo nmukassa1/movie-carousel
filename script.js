@@ -80,13 +80,24 @@ const movies = [
 
 
 function createPoster() {
-    for(let i = 0; i < movies.length; i++) {
-        const poster = document.createElement('button');
-        poster.classList.add('poster', `${movies[i].class}`);
-        poster.style.backgroundImage = `url(${movies[i].poster})`;
-        carousel.appendChild(poster);
-    }
+    window.addEventListener('DOMContentLoaded', function() {
+        for(let i = 0; i < movies.length; i++) {
+            const poster = document.createElement('button');
+            poster.classList.add('poster', `${movies[i].class}`);
+            poster.style.backgroundImage = `url(${movies[i].poster})`;
+            carousel.appendChild(poster);
+        }
+    })
 }
+
+// function createPoster() {
+//     for(let i = 0; i < movies.length; i++) {
+//         const poster = document.createElement('button');
+//         poster.classList.add('poster', `${movies[i].class}`);
+//         poster.style.backgroundImage = `url(${movies[i].poster})`;
+//         carousel.appendChild(poster);
+//     }
+// }
 
 createPoster();
 
@@ -114,8 +125,3 @@ close.addEventListener('click', () => {
 })
 
 
-let posterWidth = posterBtn[0].clientWidth;
-
-posterBtn[0].addEventListener('transitionend', function() {
-    console.log('finish')
-})
