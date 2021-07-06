@@ -3,37 +3,37 @@ const carousel = document.getElementById('slide');
 const movies = [
     {
         title: 'The Shawshank Redemption',
-        poster: '/assets/ShawshankRedemptionMoviePoster.jpeg',
+        poster: './assets/ShawshankRedemptionMoviePoster.jpeg',
         class: 'the-shawshank-redemption',
         trailer: `/assets/trailer/the-shawshank-redemption.mp4`
     },
     {
         title: 'The Dark Knight',
-        poster: '/assets/Dark_Knight.jpeg',
+        poster: './assets/Dark_Knight.jpeg',
         class: 'the-dark-knight',
         trailer: `/assets/trailer/the-dark-knight.mp4`
     },
     {
         title: 'Arrival',
-        poster: '/assets/Arrival,_Movie_Poster.jpeg',
+        poster: './assets/Arrival,_Movie_Poster.jpeg',
         class: 'arrival',
         trailer: `/assets/trailer/arrival.mp4`
     },
     {
         title: 'Sicario',
-        poster: '/assets/sicario.jpg',
+        poster: './assets/sicario.jpg',
         class: 'sicario',
         trailer: `/assets/trailer/sicario.mp4`
     },
     {
         title: 'Sicario: Day Of The Soldado',
-        poster: '/assets/sicario-day-of-the-soldado.png',
+        poster: './assets/sicario-day-of-the-soldado.png',
         class: 'sicario-day-of-the-soldad0',
         trailer: `/assets/trailer/sicario-day-of-the-soldado.mp4`
     },
     {
         title: 'Coco',
-        poster: '/assets/coco.jpeg',
+        poster: './assets/coco.jpeg',
         class: 'coco',
         trailer: `/assets/trailer/coco.mp4`
     },
@@ -41,37 +41,37 @@ const movies = [
     //Duplicate
     {
         title: 'The Shawshank Redemption',
-        poster: '/assets/ShawshankRedemptionMoviePoster.jpeg',
+        poster: './assets/ShawshankRedemptionMoviePoster.jpeg',
         class: 'the-shawshank-redemption',
         trailer: `/assets/trailer/the-shawshank-redemption.mp4`
     },
     {
         title: 'The Dark Knight',
-        poster: '/assets/Dark_Knight.jpeg',
+        poster: './assets/Dark_Knight.jpeg',
         class: 'the-dark-knight',
         trailer: `/assets/trailer/the-dark-knight.mp4`
     },
     {
         title: 'Arrival',
-        poster: '/assets/Arrival,_Movie_Poster.jpeg',
+        poster: './assets/Arrival,_Movie_Poster.jpeg',
         class: 'arrival',
         trailer: `/assets/trailer/arrival.mp4`
     },
     {
         title: 'Sicario',
-        poster: '/assets/sicario.jpg',
+        poster: './assets/sicario.jpg',
         class: 'sicario',
         trailer: `/assets/trailer/sicario.mp4`
     },
     {
         title: 'Sicario: Day Of The Soldado',
-        poster: '/assets/sicario-day-of-the-soldado.png',
+        poster: './assets/sicario-day-of-the-soldado.png',
         class: 'sicario-day-of-the-soldad0',
         trailer: `/assets/trailer/sicario-day-of-the-soldado.mp4`
     },
     {
         title: 'Coco',
-        poster: '/assets/coco.jpeg',
+        poster: './assets/coco.jpeg',
         class: 'coco',
         trailer: `/assets/trailer/coco.mp4`
     }
