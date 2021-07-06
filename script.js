@@ -87,41 +87,35 @@ function createPoster() {
             poster.style.backgroundImage = `url(${movies[i].poster})`;
             carousel.appendChild(poster);
         }
+
+
+
+        //Open trailer
+
+        const popUp = document.querySelector('.pop-up');
+        const close = document.querySelector('.close').firstElementChild;
+        const trailer = document.getElementById('trailer').firstElementChild;
+        const posterBtn = document.getElementsByClassName('poster');
+
+
+        for(let i = 0; i < posterBtn.length; i++) {
+            posterBtn[i].addEventListener('click', (e) => {
+                if(posterBtn[i].classList[1] = movies[i].class) {
+                    popUp.style.display = 'block';
+                    trailer.src = movies[i].trailer;
+                }
+            })
+        }
+
+        //Close trailer
+        close.addEventListener('click', () => {
+            popUp.style.display = 'none'
+            trailer.src = '';
+        })
     })
 }
 
-// function createPoster() {
-//     for(let i = 0; i < movies.length; i++) {
-//         const poster = document.createElement('button');
-//         poster.classList.add('poster', `${movies[i].class}`);
-//         poster.style.backgroundImage = `url(${movies[i].poster})`;
-//         carousel.appendChild(poster);
-//     }
-// }
+
 
 createPoster();
-
-
-//When poster is clicked, display pop up with the poster's synopsis and trailer
-
-const popUp = document.querySelector('.pop-up');
-const close = document.querySelector('.close').firstElementChild;
-const trailer = document.getElementById('trailer').firstElementChild;
-const posterBtn = document.getElementsByClassName('poster');
-
-
-for(let i = 0; i < posterBtn.length; i++) {
-    posterBtn[i].addEventListener('click', (e) => {
-        if(posterBtn[i].classList[1] = movies[i].class) {
-            popUp.style.display = 'block';
-            trailer.src = movies[i].trailer;
-        }
-    })
-}
-
-close.addEventListener('click', () => {
-    popUp.style.display = 'none'
-    trailer.src = '';
-})
-
 
