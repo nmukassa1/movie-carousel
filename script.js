@@ -102,7 +102,7 @@ function createPoster() {
 
         for(let i = 0; i < posterBtn.length; i++) {
             posterBtn[i].addEventListener('click', (e) => {
-                if(posterBtn[i].classList[1] = movies[i].class) {
+                if(posterBtn[i].classList.contains(movies[i].class)) {
                     popUp.style.display = 'block';
                     trailer.src = movies[i].trailer;
                 }
