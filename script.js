@@ -5,7 +5,7 @@ const movies = [
         title: 'The Shawshank Redemption',
         poster: './assets/ShawshankRedemptionMoviePoster.jpeg',
         class: 'the-shawshank-redemption',
-        trailer: `assets/trailer/the-shawshank-redemption.mp4`
+        trailer: `./assets/trailer/the-shawshank-redemption.mp4`
     },
     {
         title: 'The Dark Knight',
