@@ -3,97 +3,61 @@ const carousel = document.getElementById('slide');
 const movies = [
     {
         title: 'The Shawshank Redemption',
-        poster: './assets/ShawshankRedemptionMoviePoster.jpeg',
+        poster: 'assets/ShawshankRedemptionMoviePoster.jpeg',
         class: 'the-shawshank-redemption',
-        trailer: `../assets/trailer/the-shawshank-redemption.mp4`
+        trailer: `./assets/trailer/the-shawshank-redemption.mp4`
     },
     {
         title: 'The Dark Knight',
         poster: './assets/Dark_Knight.jpeg',
         class: 'the-dark-knight',
-        trailer: `../assets/trailer/the-dark-knight.mp4`
+        trailer: `assets/trailer/the-dark-knight.mp4`
     },
     {
         title: 'Arrival',
         poster: './assets/Arrival,_Movie_Poster.jpeg',
         class: 'arrival',
-        trailer: `../assets/trailer/arrival.mp4`
+        trailer: `assets/trailer/arrival.mp4`
     },
     {
         title: 'Sicario',
         poster: './assets/sicario.jpg',
         class: 'sicario',
-        trailer: `../assets/trailer/sicario.mp4`
+        trailer: `assets/trailer/sicario.mp4`
     },
     {
         title: 'Sicario: Day Of The Soldado',
         poster: './assets/sicario-day-of-the-soldado.png',
         class: 'sicario-day-of-the-soldad0',
-        trailer: `../assets/trailer/sicario-day-of-the-soldado.mp4`
+        trailer: `assets/trailer/sicario-day-of-the-soldado.mp4`
     },
     {
         title: 'Coco',
         poster: './assets/coco.jpeg',
         class: 'coco',
-        trailer: `../assets/trailer/coco.mp4`
-    },
-
-     //Duplicate
-     {
-        title: 'The Shawshank Redemption',
-        poster: './assets/ShawshankRedemptionMoviePoster.jpeg',
-        class: 'the-shawshank-redemption',
-        trailer: `../assets/trailer/the-shawshank-redemption.mp4`
-    },
-    {
-        title: 'The Dark Knight',
-        poster: './assets/Dark_Knight.jpeg',
-        class: 'the-dark-knight',
-        trailer: `../assets/trailer/the-dark-knight.mp4`
-    },
-    {
-        title: 'Arrival',
-        poster: './assets/Arrival,_Movie_Poster.jpeg',
-        class: 'arrival',
-        trailer: `../assets/trailer/arrival.mp4`
-    },
-    {
-        title: 'Sicario',
-        poster: './assets/sicario.jpg',
-        class: 'sicario',
-        trailer: `../assets/trailer/sicario.mp4`
-    },
-    {
-        title: 'Sicario: Day Of The Soldado',
-        poster: './assets/sicario-day-of-the-soldado.png',
-        class: 'sicario-day-of-the-soldad0',
-        trailer: `../assets/trailer/sicario-day-of-the-soldado.mp4`
-    },
-    {
-        title: 'Coco',
-        poster: './assets/coco.jpeg',
-        class: 'coco',
-        trailer: `../assets/trailer/coco.mp4`
+        trailer: `assets/trailer/coco.mp4`
     }
 ];
+const duplicateMovies = [...movies];
+const movieCarousel = [...movies, ...duplicateMovies];
 
-
-
+console.log(movieCarousel)
 
 
 function createPoster() {
+
+    //Display posters when site is loaded
     window.addEventListener('DOMContentLoaded', function() {
-        for(let i = 0; i < movies.length; i++) {
+        for(let i = 0; i < movieCarousel.length; i++) {
             const poster = document.createElement('button');
-            poster.classList.add('poster', `${movies[i].class}`);
-            poster.style.backgroundImage = `url(${movies[i].poster})`;
+            poster.classList.add('poster', `${movieCarousel[i].class}`);
+            poster.style.backgroundImage = `url(${movieCarousel[i].poster})`;
             carousel.appendChild(poster);
         }
 
 
 
         //Open trailer
-
         const popUp = document.querySelector('.pop-up');
         const close = document.querySelector('.close').firstElementChild;
         const trailer = document.getElementById('trailer').firstElementChild;
@@ -102,9 +66,9 @@ function createPoster() {
 
         for(let i = 0; i < posterBtn.length; i++) {
             posterBtn[i].addEventListener('click', (e) => {
-                if(posterBtn[i].classList.contains(movies[i].class)) {
+                if(posterBtn[i].classList.contains(movieCarousel[i].class)) {
                     popUp.style.display = 'block';
-                    trailer.src = movies[i].trailer;
+                    trailer.src = movieCarousel[i].trailer;
                 }
             })
         }
@@ -120,5 +84,4 @@ function createPoster() {
 
 
 createPoster();
-
 
