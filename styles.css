@@ -104,7 +104,7 @@ img {
 .pop-up {
   position: absolute;
   background: black;
-  width: 68em;
+  width: 80%;
   padding: 1em;
   display: none;
 }
