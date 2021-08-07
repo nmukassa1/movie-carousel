@@ -82,7 +82,8 @@ function createPoster() {
                         if(posterBtn[i].classList.contains(merge[i].class)) {
                             popUp.style.display = 'block';
                             trailer.src = merge[i].trailer;
-                            carousel.style.display = 'none'
+                            carousel.style.opacity = '0'
+                            carousel.style.pointerEvents = 'none'
                         }
                     })
                 }
@@ -91,7 +92,8 @@ function createPoster() {
                 close.addEventListener('click', () => {
                     popUp.style.display = 'none'
                     trailer.src = '';
-                    carousel.style.display = 'block'
+                    carousel.style.opacity = '1'
+                    carousel.style.pointerEvents = 'initial'
                 })
 
 
